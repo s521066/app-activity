@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Client-side App</title>
+    <link rel="stylesheet" href="css/chulhocss.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <main class="container-fluid">
+        <h1>Section Estimator</h1>
+        <h3>Calculate the average number of students per section.</h3>
+        <p>Enter the number of students:
+            <input id="numberStu" type="number" value="120">
+        </p>
+        <p>Enter the number of sections:
+            <input id="numberSec" type="number" value="3">
+        </p>
+
+        <button id="clicker" class="btn btn-primary">Calculate!</button>
+
+        <p id="result"></p>
+
+
+    </main>
+
+    <script>
+        console.log('Begin Script')
+        console.log('Declare Functions')
+        function estimate(x, y) {
+            return Math.round(x / y);
+        }
+
+        console.log('Declare Constants')
+        console.log('Event Handlers')
+        document.getElementById('clicker').addEventListener('click', function () {
+            const n = parseInt(document.getElementById('numberStu').value)
+            const m = parseInt(document.getElementById('numberSec').value)
+            const ans = 'There are average number of ' + estimate(n, m) + ' students per section.'
+            document.getElementById('result').innerHTML = ans
+        })
+
+        console.log('Script End')
+    </script>
+
+</body>
+
+</html>
