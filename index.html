@@ -38,7 +38,7 @@
         document.getElementById('clicker').addEventListener('click', function () {
             const n = parseInt(document.getElementById('numberStu').value)
             const m = parseInt(document.getElementById('numberSec').value)
-            const ans = 'There are average number of ' + estimate(n, m) + ' students per section.'
+            const ans = 'The average number of students per section is: ' + estimate(n, m) + ' students.'
             document.getElementById('result').innerHTML = ans
         })
 
